@@ -1,10 +1,9 @@
+import { useState, useEffect } from 'react';
 
 const SCROLL_UP = 'up';
 const SCROLL_DOWN = 'down';
-import {useState, useEffect} from 'react';
 
-
-const useScrollDirection = ({initialDirection, thresholdPixels, off} = {}) => {
+const useScrollDirection = ({ initialDirection, thresholdPixels, off } = {}) => {
   const [scrollDir, setScrollDir] = useState(initialDirection);
 
   useEffect(() => {
@@ -37,9 +36,7 @@ const useScrollDirection = ({initialDirection, thresholdPixels, off} = {}) => {
      * Bind the scroll handler if `off` is set to false.
      * If `off` is set to true reset the scroll direction.
      */
-    !off ?
-      window.addEventListener('scroll', onScroll) :
-      setScrollDir(initialDirection);
+    !off ? window.addEventListener('scroll', onScroll) : setScrollDir(initialDirection);
 
     return () => window.removeEventListener('scroll', onScroll);
   }, [initialDirection, thresholdPixels, off]);

@@ -3,8 +3,7 @@ const config = require('./src/config');
 module.exports = {
   siteMetadata: {
     title: 'Johan Cervantes',
-    description:
-      'Johan Cervantes is a fourth-year MIT student studying Computer Science.',
+    description: 'Johan Cervantes is an MIT senior student computer science.',
     siteUrl: 'https://johancc.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
   },
@@ -18,8 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Johan Cervantes',
-        short_name: 'JohanCervantes',
+        name: 'BrittanyChiang',
+        short_name: 'BrittanyChiang',
         start_url: '/',
         background_color: config.colors.darkNavy,
         theme_color: config.colors.navy,
@@ -75,14 +74,13 @@ module.exports = {
               maxWidth: 700,
               linkImagesToOriginal: true,
               quality: 90,
-              tracedSVG: {color: config.colors.green},
+              tracedSVG: { color: config.colors.green },
             },
           },
           {
             // https://www.gatsbyjs.org/packages/gatsby-remark-code-titles/
             resolve: 'gatsby-remark-code-titles',
-          },
-          // IMPORTANT: this must be ahead of other plugins that use code blocks
+          }, // IMPORTANT: this must be ahead of other plugins that use code blocks
           {
             // https://www.gatsbyjs.org/packages/gatsby-remark-prismjs
             resolve: `gatsby-remark-prismjs`,
@@ -107,8 +105,7 @@ module.exports = {
               // the language "sh" which will highlight using the
               // bash highlighter.
               aliases: {},
-              // This toggles the display of
-              // line numbers globally alongside the code.
+              // This toggles the display of line numbers globally alongside the code.
               // To use it, add the following line in gatsby-browser.js
               // right after importing the prism color scheme:
               //  require("prismjs/plugins/line-numbers/prism-line-numbers.css")
@@ -116,14 +113,13 @@ module.exports = {
               // If you wish to only show line numbers on certain code blocks,
               // leave false and use the {numberLines: true} syntax below
               showLineNumbers: false,
-              // If setting this to true,
-              // the parser won't handle and highlight inline
+              // If setting this to true, the parser won't handle and highlight inline
               // code used in markdown i.e. single backtick code like `this`.
               noInlineHighlight: false,
-              // This adds a new language definition to Prism or extend an
-              // already existing language definition. More details on
-              // this option can be found under the header "Add new
-              // language definition or extend an existing language" below.
+              // This adds a new language definition to Prism or extend an already
+              // existing language definition. More details on this option can be
+              // found under the header "Add new language definition or extend an
+              // existing language" below.
               languageExtensions: [
                 {
                   language: 'superscript',
