@@ -1,10 +1,10 @@
 import React from 'react';
-import {graphql, Link} from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import {Layout} from '@components';
+import { Layout } from '@components';
 
 const StyledPostContainer = styled.main`
   max-width: 1000px;
@@ -33,9 +33,9 @@ const StyledPostContent = styled.div`
   }
 `;
 
-const PostTemplate = ({data, location}) => {
-  const {frontmatter, html} = data.markdownRemark;
-  const {title, date, tags} = frontmatter;
+const PostTemplate = ({ data, location }) => {
+  const { frontmatter, html } = data.markdownRemark;
+  const { title, date, tags } = frontmatter;
 
   return (
     <Layout location={location}>
@@ -61,15 +61,14 @@ const PostTemplate = ({data, location}) => {
             {tags &&
               tags.length > 0 &&
               tags.map((tag, i) => (
-                <Link key={i}
-                  to={`/pensieve/tags/${kebabCase(tag)}/`} className="tag">
+                <Link key={i} to={`/pensieve/tags/${kebabCase(tag)}/`} className="tag">
                   #{tag}
                 </Link>
               ))}
           </p>
         </StyledPostHeader>
 
-        <StyledPostContent dangerouslySetInnerHTML={{__html: html}} />
+        <StyledPostContent dangerouslySetInnerHTML={{ __html: html }} />
       </StyledPostContainer>
     </Layout>
   );

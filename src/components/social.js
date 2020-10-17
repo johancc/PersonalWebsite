@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {socialMedia} from '@config';
-import {Side} from '@components';
-import {Icon} from '@components/icons';
+import { socialMedia } from '@config';
+import { Side } from '@components';
+import { Icon } from '@components/icons';
 
 const StyledSocialList = styled.ul`
   display: flex;
@@ -43,11 +43,11 @@ const StyledSocialList = styled.ul`
   }
 `;
 
-const Social = ({isHome}) => (
+const Social = ({ isHome }) => (
   <Side isHome={isHome} orientation="left">
     <StyledSocialList>
       {socialMedia &&
-        socialMedia.map(({url, name}, i) => (
+        socialMedia.map(({ url, name }, i) => (
           <li key={i}>
             <a href={url} aria-label={name}>
               <Icon name={name} />

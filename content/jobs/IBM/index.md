@@ -7,7 +7,9 @@ range: 'June - August 2018'
 url: 'https://www.research.ibm.com/labs/watson/'
 ---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+- Developed a command line tool to easily deploy
+  applications in the IBM Cloud stack.
+- Interfaced with Kubernetes, Istio, and IBM-specific services to create microservice & serverless deployments.
+- Presented a working demo to the Cloud team where
+  I deployed a scalable, serverless weather service
+  with A/B testing and fault-tolerance using my tool.

@@ -1,10 +1,10 @@
-import React, {useEffect, useRef} from 'react';
-import {useStaticQuery, graphql} from 'gatsby';
+import React, { useEffect, useRef } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import sr from '@utils/sr';
-import {srConfig} from '@config';
-import {Icon} from '@components/icons';
+import { srConfig } from '@config';
+import { Icon } from '@components/icons';
 
 const StyledProject = styled.div`
   display: grid;
@@ -107,7 +107,7 @@ const StyledProject = styled.div`
   }
 
   .project-description {
-    ${({theme}) => theme.mixins.boxShadow};
+    ${({ theme }) => theme.mixins.boxShadow};
     position: relative;
     z-index: 2;
     padding: 25px;
@@ -127,7 +127,7 @@ const StyledProject = styled.div`
     }
 
     a {
-      ${({theme}) => theme.mixins.inlineLink};
+      ${({ theme }) => theme.mixins.inlineLink};
     }
   }
 
@@ -175,7 +175,7 @@ const StyledProject = styled.div`
   }
 
   .project-image {
-    ${({theme}) => theme.mixins.boxShadow};
+    ${({ theme }) => theme.mixins.boxShadow};
     grid-column: 6 / -1;
     grid-row: 1 / -1;
     position: relative;
@@ -264,7 +264,7 @@ const Featured = () => {
     }
   `);
 
-  const featuredProjects = data.featured.edges.filter(({node}) => node);
+  const featuredProjects = data.featured.edges.filter(({ node }) => node);
 
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
@@ -281,16 +281,16 @@ const Featured = () => {
 
       <div>
         {featuredProjects &&
-          featuredProjects.map(({node}, i) => {
-            const {frontmatter, html} = node;
-            const {external, title, tech, github, cover} = frontmatter;
+          featuredProjects.map(({ node }, i) => {
+            const { frontmatter, html } = node;
+            const { external, title, tech, github, cover } = frontmatter;
 
             return (
-              <StyledProject key={i} ref={(el) => (revealProjects.current[i] = el)}>
+              <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">
                   <p className="project-overline">Featured Project</p>
                   <h3 className="project-title">{title}</h3>
-                  <div className="project-description" dangerouslySetInnerHTML={{__html: html}} />
+                  <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
 
                   {tech.length && (
                     <ul className="project-tech-list">

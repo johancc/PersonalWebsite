@@ -1,10 +1,10 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {Link, useStaticQuery, graphql} from 'gatsby';
-import {CSSTransition, TransitionGroup} from 'react-transition-group';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import {srConfig} from '@config';
+import { srConfig } from '@config';
 import sr from '@utils/sr';
-import {Icon} from '@components/icons';
+import { Icon } from '@components/icons';
 
 const StyledProjectsSection = styled.section`
   display: flex;
@@ -36,7 +36,7 @@ const StyledProjectsSection = styled.section`
   }
 
   .more-button {
-    ${({theme}) => theme.mixins.button};
+    ${({ theme }) => theme.mixins.button};
     margin: 80px auto 0;
   }
 `;
@@ -54,8 +54,8 @@ const StyledProject = styled.div`
   }
 
   .project-inner {
-    ${({theme}) => theme.mixins.boxShadow};
-    ${({theme}) => theme.mixins.flexBetween};
+    ${({ theme }) => theme.mixins.boxShadow};
+    ${({ theme }) => theme.mixins.flexBetween};
     flex-direction: column;
     align-items: flex-start;
     position: relative;
@@ -67,7 +67,7 @@ const StyledProject = styled.div`
   }
 
   .project-top {
-    ${({theme}) => theme.mixins.flexBetween};
+    ${({ theme }) => theme.mixins.flexBetween};
     margin-bottom: 30px;
 
     .folder {
@@ -104,7 +104,7 @@ const StyledProject = styled.div`
     font-size: 17px;
 
     a {
-      ${({theme}) => theme.mixins.inlineLink};
+      ${({ theme }) => theme.mixins.inlineLink};
     }
   }
 
@@ -165,8 +165,8 @@ const Projects = () => {
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
 
-  const GRID_LIMIT = 6;
-  const projects = data.projects.edges.filter(({node}) => node);
+  const GRID_LIMIT = 3;
+  const projects = data.projects.edges.filter(({ node }) => node);
   const firstSix = projects.slice(0, GRID_LIMIT);
   const projectsToShow = showMore ? projects : firstSix;
 
@@ -180,9 +180,9 @@ const Projects = () => {
 
       <TransitionGroup className="projects-grid">
         {projectsToShow &&
-          projectsToShow.map(({node}, i) => {
-            const {frontmatter, html} = node;
-            const {github, external, title, tech} = frontmatter;
+          projectsToShow.map(({ node }, i) => {
+            const { frontmatter, html } = node;
+            const { github, external, title, tech } = frontmatter;
 
             return (
               <CSSTransition
@@ -192,7 +192,7 @@ const Projects = () => {
                 exit={false}>
                 <StyledProject
                   key={i}
-                  ref={(el) => (revealProjects.current[i] = el)}
+                  ref={el => (revealProjects.current[i] = el)}
                   tabIndex="0"
                   style={{
                     transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
@@ -221,7 +221,7 @@ const Projects = () => {
 
                       <div
                         className="project-description"
-                        dangerouslySetInnerHTML={{__html: html}}
+                        dangerouslySetInnerHTML={{ __html: html }}
                       />
                     </header>
 

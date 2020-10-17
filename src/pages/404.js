@@ -1,14 +1,14 @@
-import React, {useState, useEffect} from 'react';
-import {Link} from 'gatsby';
-import {Helmet} from 'react-helmet';
-import {CSSTransition, TransitionGroup} from 'react-transition-group';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {navDelay} from '@utils';
-import {Layout} from '@components';
+import { navDelay } from '@utils';
+import { Layout } from '@components';
 
 const StyledMainContainer = styled.main`
-  ${({theme}) => theme.mixins.flexCenter};
+  ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
 `;
 const StyledTitle = styled.h1`
@@ -22,11 +22,11 @@ const StyledSubtitle = styled.h2`
   font-weight: 400;
 `;
 const StyledHomeButton = styled(Link)`
-  ${({theme}) => theme.mixins.bigButton};
+  ${({ theme }) => theme.mixins.bigButton};
   margin-top: 40px;
 `;
 
-const NotFoundPage = ({location}) => {
+const NotFoundPage = ({ location }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {

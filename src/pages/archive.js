@@ -1,12 +1,12 @@
-import React, {useRef, useEffect} from 'react';
-import {graphql} from 'gatsby';
+import React, { useRef, useEffect } from 'react';
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import {srConfig} from '@config';
+import { srConfig } from '@config';
 import sr from '@utils/sr';
-import {Layout} from '@components';
-import {Icon} from '@components/icons';
+import { Layout } from '@components';
+import { Icon } from '@components/icons';
 
 const StyledTableContainer = styled.div`
   margin: 100px -20px;
@@ -115,7 +115,7 @@ const StyledTableContainer = styled.div`
           align-items: center;
 
           a {
-            ${({theme}) => theme.mixins.flexCenter};
+            ${({ theme }) => theme.mixins.flexCenter};
             flex-shrink: 0;
           }
 
@@ -128,7 +128,7 @@ const StyledTableContainer = styled.div`
   }
 `;
 
-const ArchivePage = ({location, data}) => {
+const ArchivePage = ({ location, data }) => {
   const projects = data.allMarkdownRemark.edges;
   const revealTitle = useRef(null);
   const revealTable = useRef(null);
@@ -147,7 +147,7 @@ const ArchivePage = ({location, data}) => {
       <main>
         <header ref={revealTitle}>
           <h1 className="big-heading">Archive</h1>
-          <p className="subtitle">A big list of things I’ve worked on</p>
+          <p className="subtitle">A list of things that I coded at some point</p>
         </header>
 
         <StyledTableContainer ref={revealTable}>
@@ -163,19 +163,10 @@ const ArchivePage = ({location, data}) => {
             </thead>
             <tbody>
               {projects.length > 0 &&
-                projects.map(({node}, i) => {
-                  const {
-                    date,
-                    github,
-                    external,
-                    ios,
-                    android,
-                    title,
-                    tech,
-                    company,
-                  } = node.frontmatter;
+                projects.map(({ node }, i) => {
+                  const { date, github, external, title, tech, company } = node.frontmatter;
                   return (
-                    <tr key={i} ref={(el) => (revealProjects.current[i] = el)}>
+                    <tr key={i} ref={el => (revealProjects.current[i] = el)}>
                       <td className="overline year">{`${new Date(date).getFullYear()}`}</td>
 
                       <td className="title">{title}</td>
@@ -205,16 +196,6 @@ const ArchivePage = ({location, data}) => {
                           {github && (
                             <a href={github} aria-label="GitHub Link">
                               <Icon name="GitHub" />
-                            </a>
-                          )}
-                          {ios && (
-                            <a href={ios} aria-label="Apple App Store Link">
-                              <Icon name="AppStore" />
-                            </a>
-                          )}
-                          {android && (
-                            <a href={android} aria-label="Google Play Store Link">
-                              <Icon name="PlayStore" />
                             </a>
                           )}
                         </div>
@@ -250,8 +231,6 @@ export const pageQuery = graphql`
             tech
             github
             external
-            ios
-            android
             company
           }
           html

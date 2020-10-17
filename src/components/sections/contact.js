@@ -1,6 +1,6 @@
-import React, {useEffect, useRef} from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import {srConfig, email} from '@config';
+import { srConfig, email } from '@config';
 import sr from '@utils/sr';
 
 const StyledContactSection = styled.section`
@@ -35,7 +35,7 @@ const StyledContactSection = styled.section`
   }
 
   .email-link {
-    ${({theme}) => theme.mixins.bigButton};
+    ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
   }
 `;
@@ -51,8 +51,8 @@ const Contact = () => {
       <h2 className="title">Get In Touch</h2>
 
       <p>
-        Whether you have a question
-        or just want to say hi, I&apos;ll try my best to get back to you!
+        Whether you have a question or just want to say hi, I&apos;ll try my best to get back to
+        you!
       </p>
 
       <a className="email-link" href={`mailto:${email}`}>

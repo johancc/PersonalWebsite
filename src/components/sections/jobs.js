@@ -1,9 +1,9 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {useStaticQuery, graphql} from 'gatsby';
-import {CSSTransition} from 'react-transition-group';
+import React, { useState, useEffect, useRef } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
-import {srConfig} from '@config';
-import {KEY_CODES} from '@utils';
+import { srConfig } from '@config';
+import { KEY_CODES } from '@utils';
 import sr from '@utils/sr';
 
 const StyledJobsSection = styled.section`
@@ -59,7 +59,7 @@ const StyledTabList = styled.ul`
 `;
 
 const StyledTabButton = styled.button`
-  ${({theme}) => theme.mixins.link};
+  ${({ theme }) => theme.mixins.link};
   display: flex;
   align-items: center;
   width: 100%;
@@ -67,7 +67,7 @@ const StyledTabButton = styled.button`
   padding: 0 20px 2px;
   border-left: 2px solid var(--lightest-navy);
   background-color: transparent;
-  color: ${({isActive}) => (isActive ? 'var(--green)' : 'var(--slate)')};
+  color: ${({ isActive }) => (isActive ? 'var(--green)' : 'var(--slate)')};
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
   text-align: left;
@@ -77,7 +77,7 @@ const StyledTabButton = styled.button`
     padding: 0 15px 2px;
   }
   @media (max-width: 600px) {
-    ${({theme}) => theme.mixins.flexCenter};
+    ${({ theme }) => theme.mixins.flexCenter};
     min-width: 120px;
     padding: 0 15px;
     border-left: 0;
@@ -100,7 +100,7 @@ const StyledHighlight = styled.div`
   height: var(--tab-height);
   border-radius: var(--border-radius);
   background: var(--green);
-  transform: translateY(calc(${({activeTabId}) => activeTabId} * var(--tab-height)));
+  transform: translateY(calc(${({ activeTabId }) => activeTabId} * var(--tab-height)));
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition-delay: 0.1s;
 
@@ -111,7 +111,7 @@ const StyledHighlight = styled.div`
     max-width: var(--tab-width);
     height: 2px;
     margin-left: 50px;
-    transform: translateX(calc(${({activeTabId}) => activeTabId} * var(--tab-width)));
+    transform: translateX(calc(${({ activeTabId }) => activeTabId} * var(--tab-width)));
   }
   @media (max-width: 480px) {
     margin-left: 25px;
@@ -132,7 +132,7 @@ const StyledTabContent = styled.div`
   }
 
   ul {
-    ${({theme}) => theme.mixins.fancyList};
+    ${({ theme }) => theme.mixins.fancyList};
   }
 
   h3 {
@@ -204,7 +204,7 @@ const Jobs = () => {
   useEffect(() => focusTab(), [tabFocus]);
 
   // Focus on tabs when using up & down arrow keys
-  const onKeyDown = (e) => {
+  const onKeyDown = e => {
     if (e.key === KEY_CODES.ARROW_UP || e.key === KEY_CODES.ARROW_DOWN) {
       e.preventDefault();
       // Move up
@@ -225,14 +225,14 @@ const Jobs = () => {
       <div className="inner">
         <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={onKeyDown}>
           {jobsData &&
-            jobsData.map(({node}, i) => {
-              const {company} = node.frontmatter;
+            jobsData.map(({ node }, i) => {
+              const { company } = node.frontmatter;
               return (
                 <li key={i}>
                   <StyledTabButton
                     isActive={activeTabId === i}
                     onClick={() => setActiveTabId(i)}
-                    ref={(el) => (tabs.current[i] = el)}
+                    ref={el => (tabs.current[i] = el)}
                     id={`tab-${i}`}
                     role="tab"
                     aria-selected={activeTabId === i ? true : false}
@@ -247,9 +247,9 @@ const Jobs = () => {
         </StyledTabList>
 
         {jobsData &&
-          jobsData.map(({node}, i) => {
-            const {frontmatter, html} = node;
-            const {title, url, company, range} = frontmatter;
+          jobsData.map(({ node }, i) => {
+            const { frontmatter, html } = node;
+            const { title, url, company, range } = frontmatter;
 
             return (
               <CSSTransition key={i} in={activeTabId === i} timeout={250} classNames="fade">
@@ -272,7 +272,7 @@ const Jobs = () => {
 
                   <p className="range">{range}</p>
 
-                  <div dangerouslySetInnerHTML={{__html: html}} />
+                  <div dangerouslySetInnerHTML={{ __html: html }} />
                 </StyledTabContent>
               </CSSTransition>
             );

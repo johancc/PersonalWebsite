@@ -1,8 +1,8 @@
-import React, {useEffect, useRef} from 'react';
-import {useStaticQuery, graphql} from 'gatsby';
+import React, { useEffect, useRef } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import {srConfig} from '@config';
+import { srConfig } from '@config';
 import sr from '@utils/sr';
 
 const StyledAboutSection = styled.section`
@@ -55,7 +55,7 @@ const StyledPic = styled.div`
   }
 
   .wrapper {
-    ${({theme}) => theme.mixins.boxShadow};
+    ${({ theme }) => theme.mixins.boxShadow};
     display: block;
     position: relative;
     width: 100%;
@@ -132,8 +132,16 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Pytorch & Tensorflow', 'Rust', 'JavaScript (ES6+)',
-    'HTML & CSS', 'React', 'Node.js', 'Neural Styling', 'WebRTC'];
+  const skills = [
+    'Pytorch & Tensorflow',
+    'Rust',
+    'JavaScript (ES6+)',
+    'HTML & CSS',
+    'React',
+    'Node.js',
+    'Neural Styling',
+    'WebRTC',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -142,20 +150,20 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I am Johan Cervantes,
-               a senior MIT student studying computer science.</p>
+            <p>Hello! I am Johan Cervantes, a senior MIT student studying computer science.</p>
             <p>
-              I enjoy building new things based on research papers
-              I read or new libraries, whetherbe websites,
-              machine-learning models, or command line scripts.
+              I enjoy building new things based on research papers I read or new libraries,
+              whetherbe websites, machine-learning models, or command line scripts.
             </p>
 
             <p>
-              I am currently finishing my Bachelors at the {' '}
-              <a href="https://www.mit.edu">Massachusetts Institute of Technology</a>, where
-              I am part of the
-              <a href="https://www.media.mit.edu/groups/viral-communications/overview/">Viral Media Group</a> at
-              the <a href="https://www.media.mit.edu/">Media Lab</a>.
+              I am currently finishing my Bachelors at the{' '}
+              <a href="https://www.mit.edu">Massachusetts Institute of Technology</a>, where I am
+              part of the
+              <a href="https://www.media.mit.edu/groups/viral-communications/overview/">
+                Viral Media Group
+              </a>{' '}
+              at the <a href="https://www.media.mit.edu/">Media Lab</a>.
             </p>
 
             <p>Here are a few technologies I have working with recently:</p>
@@ -168,9 +176,7 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <Img
-              fluid={data.avatar.childImageSharp.fluid}
-              alt="Avatar" className="img" />
+            <Img fluid={data.avatar.childImageSharp.fluid} alt="Avatar" className="img" />
           </div>
         </StyledPic>
       </div>

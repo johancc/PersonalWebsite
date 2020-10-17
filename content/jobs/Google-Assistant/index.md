@@ -7,7 +7,7 @@ range: 'June - August 2020'
 url: 'https://www.android.com/auto/'
 ---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+- Designed, engineered, and launched a feature on Google Assistant for Android auto which informs users how many minutes away stops are along their route.
+- Used an internal language-generation tool to provide conversational dialogue in over 18 locales.
+- Collaborated with cross-functional teams to prevent Google Assistant's "Btw" feature from triggering at the wrong time.
+- Wrote unit and end-to-end tests, ensuring that my feature worked in multiple types of devices, languags, and situations.

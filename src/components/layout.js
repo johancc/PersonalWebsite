@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import styled, {ThemeProvider} from 'styled-components';
-import {Head, Loader, Nav, Social, Email, Footer} from '@components';
-import {GlobalStyle, theme} from '@styles';
+import styled, { ThemeProvider } from 'styled-components';
+import { Head, Loader, Nav, Social, Email, Footer } from '@components';
+import { GlobalStyle, theme } from '@styles';
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
@@ -45,7 +45,7 @@ const StyledContent = styled.div`
   min-height: 100vh;
 `;
 
-const Layout = ({children, location}) => {
+const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
 
@@ -69,7 +69,7 @@ const Layout = ({children, location}) => {
   const handleExternalLinks = () => {
     const allLinks = Array.from(document.querySelectorAll('a'));
     if (allLinks.length > 0) {
-      allLinks.forEach((link) => {
+      allLinks.forEach(link => {
         if (link.host !== window.location.host) {
           link.setAttribute('rel', 'noopener noreferrer');
           link.setAttribute('target', '_blank');

@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react';
-import {CSSTransition, TransitionGroup} from 'react-transition-group';
+import React, { useState, useEffect } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import {email} from '@config';
-import {navDelay, loaderDelay} from '@utils';
+import { email } from '@config';
+import { navDelay, loaderDelay } from '@utils';
 
 const StyledHeroSection = styled.section`
-  ${({theme}) => theme.mixins.flexCenter};
+  ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
   min-height: 100vh;
@@ -34,15 +34,13 @@ const StyledHeroSection = styled.section`
   }
 
   .email-link {
-    ${({theme}) => theme.mixins.bigButton};
+    ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
   }
 `;
 
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
-  console.log('render');
-  console.log(isMounted);
   useEffect(() => {
     const timeout = setTimeout(() => setIsMounted(true), navDelay);
     return () => clearTimeout(timeout);
@@ -50,12 +48,11 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Johan Cervantes</h2>;
-  const three = <h3 className="big-heading">I have a dog.</h3>;
+  const three = <h3 className="big-heading">I&apos;m a full stack developer.</h3>;
   const four = (
     <p>
-      I&apos;m an MIT senior studying computer science,
-        with a minor in data science. I currently
-        work at the MIT Media Lab on making online interactions more engaging.
+      I&apos;m an MIT senior studying computer science, with a minor in data science. I currently
+      work at the MIT Media Lab on making online interactions more engaging.
     </p>
   );
   const five = (
@@ -72,7 +69,7 @@ const Hero = () => {
         {isMounted &&
           items.map((item, i) => (
             <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
-              <div style={{transitionDelay: `${i + 1}00ms`}}>{item}</div>
+              <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
             </CSSTransition>
           ))}
       </TransitionGroup>

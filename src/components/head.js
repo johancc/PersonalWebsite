@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Helmet} from 'react-helmet';
-import {useLocation} from '@reach/router';
-import {useStaticQuery, graphql} from 'gatsby';
+import { Helmet } from 'react-helmet';
+import { useLocation } from '@reach/router';
+import { useStaticQuery, graphql } from 'gatsby';
 
 // https://www.gatsbyjs.com/docs/add-seo-component/
 
-const Head = ({title, description, image}) => {
-  const {pathname} = useLocation();
+const Head = ({ title, description, image }) => {
+  const { pathname } = useLocation();
 
-  const {site} = useStaticQuery(
-      graphql`
+  const { site } = useStaticQuery(
+    graphql`
       query {
         site {
           siteMetadata {
@@ -24,12 +24,7 @@ const Head = ({title, description, image}) => {
     `,
   );
 
-  const {
-    defaultTitle,
-    defaultDescription,
-    siteUrl,
-    defaultImage,
-  } = site.siteMetadata;
+  const { defaultTitle, defaultDescription, siteUrl, defaultImage } = site.siteMetadata;
 
   const seo = {
     title: title || defaultTitle,
@@ -39,8 +34,7 @@ const Head = ({title, description, image}) => {
   };
 
   return (
-    <Helmet title={title} defaultTitle={seo.title}
-      titleTemplate={`%s | ${defaultTitle}`}>
+    <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
       <html lang="en" />
 
       <meta name="description" content={seo.description} />
@@ -52,8 +46,7 @@ const Head = ({title, description, image}) => {
       <meta property="og:url" content={seo.url} />
       <meta property="og:type" content="website" />
 
-      <meta name="google-site-verification"
-        content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
+      <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
     </Helmet>
   );
 };

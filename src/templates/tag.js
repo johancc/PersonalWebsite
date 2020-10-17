@@ -1,20 +1,20 @@
 import React from 'react';
-import {Link, graphql} from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import {Layout} from '@components';
+import { Layout } from '@components';
 
 const StyledTagsContainer = styled.main`
   max-width: 1000px;
 
   a {
-    ${({theme}) => theme.mixins.inlineLink};
+    ${({ theme }) => theme.mixins.inlineLink};
   }
 
   h1 {
-    ${({theme}) => theme.mixins.flexBetween};
+    ${({ theme }) => theme.mixins.flexBetween};
     margin-bottom: 50px;
 
     a {
@@ -45,9 +45,9 @@ const StyledTagsContainer = styled.main`
   }
 `;
 
-const TagTemplate = ({pageContext, data, location}) => {
-  const {tag} = pageContext;
-  const {edges} = data.allMarkdownRemark;
+const TagTemplate = ({ pageContext, data, location }) => {
+  const { tag } = pageContext;
+  const { edges } = data.allMarkdownRemark;
 
   return (
     <Layout location={location}>
@@ -67,8 +67,8 @@ const TagTemplate = ({pageContext, data, location}) => {
         </h1>
 
         <ul className="fancy-list">
-          {edges.map(({node}) => {
-            const {title, slug, date, tags} = node.frontmatter;
+          {edges.map(({ node }) => {
+            const { title, slug, date, tags } = node.frontmatter;
             return (
               <li key={slug}>
                 <h2>
@@ -86,9 +86,7 @@ const TagTemplate = ({pageContext, data, location}) => {
                   {tags &&
                     tags.length > 0 &&
                     tags.map((tag, i) => (
-                      <Link key={i}
-                        to={`/pensieve/tags/${kebabCase(tag)}/`}
-                        className="tag">
+                      <Link key={i} to={`/pensieve/tags/${kebabCase(tag)}/`} className="tag">
                         #{tag}
                       </Link>
                     ))}
@@ -112,13 +110,13 @@ TagTemplate.propTypes = {
     allMarkdownRemark: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
       edges: PropTypes.arrayOf(
-          PropTypes.shape({
-            node: PropTypes.shape({
-              frontmatter: PropTypes.shape({
-                title: PropTypes.string.isRequired,
-              }),
+        PropTypes.shape({
+          node: PropTypes.shape({
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
             }),
-          }).isRequired,
+          }),
+        }).isRequired,
       ),
     }),
   }),

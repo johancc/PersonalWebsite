@@ -1,4 +1,4 @@
-import {css} from 'styled-components';
+import { css } from 'styled-components';
 
 import CalibreRegularWoff from '@fonts/Calibre/Calibre-Regular.woff';
 import CalibreRegularWoff2 from '@fonts/Calibre/Calibre-Regular.woff2';
