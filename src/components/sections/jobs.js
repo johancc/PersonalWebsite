@@ -226,7 +226,9 @@ const Jobs = () => {
         <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={onKeyDown}>
           {jobsData &&
             jobsData.map(({ node }, i) => {
-              const { company } = node.frontmatter;
+              let { company } = node.frontmatter;
+              // Different behavior for company + subteam (e.g. "Google (Assistant)")
+              company = company.split(' ')[0];
               return (
                 <li key={i}>
                   <StyledTabButton
