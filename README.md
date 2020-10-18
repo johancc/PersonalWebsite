@@ -2,10 +2,10 @@
   <img alt="Logo" src="https://raw.githubusercontent.com/bchiang7/v4/main/src/images/logo.png" width="100" />
 </div>
 <h1 align="center">
-  johanc.dev
+  <a href="https://johanc.dev">johanc.dev</a>
 </h1>
 <p align="center">
-  The first iteration of <a href="https://brittanychiang.com" target="_blank">johancc.com</a> based on <a href="https://brittanychiang.com">Brittany Chiang's work </a>.
+  The first iteration of <a href="https://brittanychiang.com" target="_blank">johanc.dev</a> based on <a href="https://brittanychiang.com">Brittany Chiang's work </a>.
 </p>
 
 ![demo](https://raw.githubusercontent.com/johancc/PersonalWebsite/main/src/images/demo.png)
