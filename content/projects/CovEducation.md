@@ -1,6 +1,6 @@
 ---
 date: '2020-05-20'
-title: 'Coveducation v2'
+title: 'CovEducation V2'
 github: 'https://github.com/CovEducation/CovEducation'
 external: 'http://www.coved.org'
 tech:
