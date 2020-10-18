@@ -1,13 +1,19 @@
 ---
-date: '2020-07-10'
-title: 'DanceTroupe Website'
-github: 'https://github.com/shannenwu/dtwebsite'
-external: 'http://dancetroupe.mit.edu/'
+date: '2020-05-20'
+title: 'Coveducation v2'
+github: 'https://github.com/CovEducation/CovEducation'
+external: 'http://www.coved.org'
 tech:
   - ReactJS
-  - MongoDB + Mongoose
+  - Firebase
+  - Firestore
+  - Heroku
+  - Algolia
+  - Twilio
 showInProjects: true
-company: 'MIT'
+company: 'CovEd'
 ---
 
-Maintainer of Dancetroupe's website - The largest dancing club at MIT.
+A redesign of the original CovEducation website. The updated site
+has a faster load speed, better UI, and has a better mentor finding
+UX. Built with ReactJS.

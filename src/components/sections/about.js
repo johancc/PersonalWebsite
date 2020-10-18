@@ -133,7 +133,7 @@ const About = () => {
   }, []);
 
   const skills = [
-    'Pytorch & Tensorflow',
+    'PyTorch & Tensorflow',
     'Rust',
     'JavaScript (ES6+)',
     'HTML & CSS',
@@ -157,7 +157,7 @@ const About = () => {
             </p>
 
             <p>
-              I am currently finishing my Bachelors at the{' '}
+              I am currently finishing my Bachelor&apos;s at the{' '}
               <a href="https://www.mit.edu">Massachusetts Institute of Technology</a>, where I am
               part of the
               <a href="https://www.media.mit.edu/groups/viral-communications/overview/">

@@ -48,11 +48,13 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Johan Cervantes</h2>;
-  const three = <h3 className="big-heading">I&apos;m a full stack developer.</h3>;
+  const three = <h3 className="big-heading">I&apos;m a full stack software engineer.</h3>;
   const four = (
     <p>
       I&apos;m an MIT senior studying computer science, with a minor in data science. I currently
-      work at the MIT Media Lab on making online interactions more engaging.
+      work on{' '}
+      <a href="https://www.media.mit.edu/projects/ultimate-media/overview/"> telecreativity </a> at
+      the MIT Media Lab.
     </p>
   );
   const five = (
