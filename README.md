@@ -5,7 +5,7 @@
   johancc.com - v0
 </h1>
 <p align="center">
-  The first iteration of <a href="https://brittanychiang.com" target="_blank">johancc.com</a> based on Brittany Chiang's work <a href="https://brittanychiang.com">.
+  The first iteration of <a href="https://brittanychiang.com" target="_blank">johancc.com</a> based on <a href="https://brittanychiang.com">Brittany Chiang's work </a>.
 </p>
 
 ![demo](https://raw.githubusercontent.com/johancc/PersonalWebsite/main/src/images/demo.png)
