@@ -45,9 +45,7 @@ const Head = ({ title, description, image }) => {
       <meta property="og:image" content={seo.image} />
       <meta property="og:url" content={seo.url} />
       <meta property="og:type" content="website" />
-
-      {/* TODO */}
-      <meta name="google-site-verification" content="" />
+      <meta name="google-site-verification" content="S1pXOne27BAqJM2OzXK1IYTxm_VvyP5xdGS92lcYSxA" />
     </Helmet>
   );
 };
