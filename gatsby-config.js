@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: 'Johan Cervantes',
     description: 'Johan Cervantes is an MIT senior student computer science.',
-    siteUrl: 'https://johancc.com', // No trailing slash allowed!
+    siteUrl: 'https://johanc.dev', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
   },
   plugins: [
