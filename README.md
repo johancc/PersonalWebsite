@@ -8,7 +8,7 @@
   The first iteration of <a href="https://brittanychiang.com" target="_blank">johancc.com</a> based on Brittany Chiang's work <a href="https://brittanychiang.com">.
 </p>
 
-![demo](https://raw.githubusercontent.com/bchiang7/v4/main/src/images/demo.png)
+![demo](https://raw.githubusercontent.com/johancc/PersonalWebsite/main/src/images/demo.png)
 
 ## 🛠 Installation & Set Up
 
