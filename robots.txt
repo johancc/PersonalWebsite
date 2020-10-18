@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://johancc.com/sitemap.xml
-Host: https://johancc.com
+Sitemap: https://johanc.dev/sitemap.xml
+Host: https://johanc.dev
