@@ -1,7 +1,7 @@
 const config = require('./src/config');
 
 module.exports = {
-  pathPrefix: '/PersonalWebsite',
+  pathPrefix: '',
   siteMetadata: {
     title: 'Johan Cervantes',
     description: 'Johan Cervantes is an MIT senior student computer science.',
