@@ -51,10 +51,8 @@ const Hero = () => {
   const three = <h3 className="big-heading">I&apos;m a full stack software engineer.</h3>;
   const four = (
     <p>
-      I&apos;m an MIT senior studying computer science, with a minor in data science. I currently
-      work on{' '}
-      <a href="https://www.media.mit.edu/projects/ultimate-media/overview/"> telecreativity </a> at
-      the MIT Media Lab.
+      Professionally and academically, I've been exploring how our relationship with technology may
+      evolve in the near future.
     </p>
   );
   const five = (

@@ -133,14 +133,12 @@ const About = () => {
   }, []);
 
   const skills = [
-    'PyTorch & Tensorflow',
-    'Rust',
-    'JavaScript (ES6+)',
-    'HTML & CSS',
-    'React',
+    'Knowledge Graphs',
+    'Ontologies',
+    'Retrieval-Augmented Generation',
     'Node.js',
-    'Neural Styling',
-    'WebRTC',
+    'Distributed Systems',
+    'C++',
   ];
 
   return (
@@ -150,23 +148,32 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I am Johan Cervantes, a senior MIT student studying computer science.</p>
             <p>
-              I enjoy building new things based on research papers I read or new libraries,
-              whetherbe websites, machine-learning models, or command line scripts.
+              Hello! I am Johan Cervantes, a full-stack software engineer with 5+ years of
+              experience building impactful software. Professionally and academically, I've been
+              exploring how our relationship with technology may evolve in the near future - ranging
+              from research on{' '}
+              <a href="https://www.media.mit.edu/projects/unspoken-news/overview/">
+                our relationship with media
+              </a>
+              , to improving the{' '}
+              <a href="https://stanforddaily.com/2020/06/29/coveducation-makes-impact-on-kids-after-school-closure/">
+                education of underprivileged communities
+              </a>
+              .{' '}
             </p>
-
+            <p></p>
             <p>
-              I am currently finishing my Bachelor&apos;s at the{' '}
-              <a href="https://www.mit.edu">Massachusetts Institute of Technology</a>, where I am
-              part of the
+              Currently, I'm working at Google Maps, where I help build one of the most
+              comprehensive data models of the real world. Previously, I obtained my Bachelor&apos;s
+              at <a href="https://www.mit.edu">MIT</a>, where I was part of the
               <a href="https://www.media.mit.edu/groups/viral-communications/overview/">
                 Viral Media Group
               </a>{' '}
-              at the <a href="https://www.media.mit.edu/">Media Lab</a>.
+              at the <a href="https://www.media.mit.edu/">Media Lab</a> and a founding engineer for
+              <a href="https://www.coveducation.com">CovEducation</a>, an education non-profit.
             </p>
-
-            <p>Here are a few technologies I have working with recently:</p>
+            <p>Recently, I've been spending some time learning about:</p>
           </div>
 
           <ul className="skills-list">
