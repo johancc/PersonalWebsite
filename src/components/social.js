@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -23,21 +24,21 @@ const StyledSocialList = styled.ul`
   }
 
   li {
-    padding: 10px;
-
     &:last-of-type {
       margin-bottom: 20px;
     }
 
     a {
+      padding: 10px;
+
       &:hover,
       &:focus {
         transform: translateY(-3px);
       }
 
       svg {
-        width: 18px;
-        height: 18px;
+        width: 20px;
+        height: 20px;
       }
     }
   }
@@ -49,7 +50,7 @@ const Social = ({ isHome }) => (
       {socialMedia &&
         socialMedia.map(({ url, name }, i) => (
           <li key={i}>
-            <a href={url} aria-label={name}>
+            <a href={url} aria-label={name} target="_blank" rel="noreferrer">
               <Icon name={name} />
             </a>
           </li>

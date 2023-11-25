@@ -60,9 +60,9 @@ const StyledCredit = styled.div`
     }
     svg {
       display: inline-block;
-      width: auto;
-      height: 15px;
       margin-right: 5px;
+      width: 14px;
+      height: 14px;
     }
   }
 `;
@@ -80,7 +80,6 @@ const Footer = () => {
     fetch('https://api.github.com/repos/bchiang7/v4')
       .then(response => response.json())
       .then(json => {
-        // eslint-disable-next-line camelcase
         const { stargazers_count, forks_count } = json;
         setGitHubInfo({
           stars: stargazers_count,

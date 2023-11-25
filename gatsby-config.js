@@ -1,16 +1,16 @@
 const config = require('./src/config');
 
 module.exports = {
-  pathPrefix: '',
   siteMetadata: {
     title: 'Johan Cervantes',
     description: 'Johan Cervantes is an MIT senior student computer science.',
     siteUrl: 'https://johanc.dev', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
+    image: '/og.png',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'JohanCervantes',
-        short_name: 'JohanCervantes',
+        name: 'Johan Cervantes',
+        short_name: 'Johan Cervantes',
         start_url: '/',
         background_color: config.colors.darkNavy,
         theme_color: config.colors.navy,
@@ -150,7 +150,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-180822314-1',
+        trackingId: 'UA-45666519-2',
       },
     },
   ],
