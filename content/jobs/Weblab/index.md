@@ -1,7 +1,7 @@
 ---
 date: '2020-01-07'
 title: 'Instructor'
-company: 'MIT Weblab'
+company: 'MIT'
 location: 'Cambridge, MA'
 range: 'December 2019 - February 2021'
 url: 'http://weblab.mit.edu'

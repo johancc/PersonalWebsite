@@ -1,7 +1,7 @@
 ---
 date: '2019-08-24'
 title: 'Software Engineer Intern'
-company: 'Google (Search)'
+company: 'Google'
 location: 'Mountain View, CA'
 range: 'June - August 2019'
 url: 'https://blog.google/products/search/'

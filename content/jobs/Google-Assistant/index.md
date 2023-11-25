@@ -1,7 +1,7 @@
 ---
 date: '2020-08-23'
 title: 'Software Engineer Intern'
-company: 'Google (Geo Assistant)'
+company: 'Google'
 location: 'Virtual'
 range: 'June - August 2020'
 url: 'https://www.android.com/auto/'
